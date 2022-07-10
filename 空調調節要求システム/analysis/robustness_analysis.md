@@ -10,11 +10,11 @@
 ![](img/robustness01.jpg)
 ## 2. 授業を作成する
 ---
-- [ユースケース記述](../usecase/Usecase02.md)
+- [ユースケース記述](../usecase/Usecase2.md)
 ![]()
 ## 3. 授業に入る
 ---
-- [ユースケース記述](img/robustness02.jpg)
+- [ユースケース記述](img/robustness2.jpg)
 ![]()
 ## 4. 投票する
 ---
