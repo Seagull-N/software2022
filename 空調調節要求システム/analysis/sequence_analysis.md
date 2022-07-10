@@ -16,9 +16,9 @@
 ![](img/sequence02.png)
 ## 3. 授業に入る
 ---
-- [ユースケース記述]()
-![]()
-![]()
+- [ユースケース記述](../usecase/Usecase03.md)
+![](img/robustness03.jpg)
+![](img/sequence03.png)
 ## 4. 投票する
 ---
 - [ユースケース記述]()
