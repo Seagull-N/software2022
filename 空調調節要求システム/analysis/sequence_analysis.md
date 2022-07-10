@@ -8,7 +8,7 @@
 ---
 - [ユースケース記述](../usecase/Usecase01.md)
 ![](img/robustness01.jpg)
-![](img/sequencee01.png)
+![](img/sequence01.png)
 ## 2. 授業を作成する
 ---
 - [ユースケース記述](../usecase/Usecase2.md)
