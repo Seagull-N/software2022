@@ -4,7 +4,7 @@
 ## システム・アーキテクチャ
 会議室予約システムのシステムアーキテクチャを下に示す．
 
-<img src="img/meeting_architecture.png">
+![](img/meeting_architecture.png)
 
 [要求仕様書](../requirement/README.md) からWebアプリケーションとして実現することが求められているため，以下の設計選択を行った．
 - AWSに，Linux (CentOS)をインストール
@@ -19,7 +19,7 @@
 
 以上をまとめて，設計レベルのクラス図を作成した．
 
-<img src="img/class_final.png">
+![](img/class_final.png)
 
 補足説明
 - バウンダリクラスは，ThymeleafのHTMLテンプレートとして設計している
