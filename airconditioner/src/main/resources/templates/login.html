@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空調管理要求システム</title>
+</head>
+<body>
+    <h1>ログイン画面</h1>
+    <h2>ログイン</h2>
+    <p> IDとRoleを選択してログインしてください</p>
+
+    <form role="form" th:action="@{/}" th:object="${UserForm}" method="post">
+        <table>
+            <tr>
+                <td><label>ID: </label></td>
+                <td>メンバーIDには，アルファベット小文字，数字，ハイフン，アンダーバーのみ使用できます</td>
+                <td><input type="text" required th:field="*{uid}" /></td>
+            </tr>
+            <tr>
+                <td><label>Role: </label></td>
+                <td>USERかTEACHERを入力してください。</td>
+                <td><input type="text" required th:field="*{role}" /></td>
+            </tr>
+        </table>
+        <p><input type="submit" value="ログイン" /></p>
+    </form>
+</body>
+</html>

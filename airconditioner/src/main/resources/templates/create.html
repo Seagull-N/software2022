@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空調管理要求システム</title>
+</head>
+<body>
+    <h1>教室作成</h1>
+
+    <form role="form" th:action="@{/create}" th:object="${ClassForm}" method="post">
+        <table>
+            <tr>
+                <td><label>ID: </label></td>
+                <td>授業名を入力してください</td>
+                <td><input type="text" required th:field="*{className}" /></td>
+            </tr>
+            <tr>
+                <td><label>Role: </label></td>
+                <td>授業が何分後に終了するか半角数字で入力してください</td>
+                <td><input type="text" required th:field="*{endTime}" /></td>
+            </tr>
+        </table>
+        <p><input type="submit" value="作成" /></p>
+    </form>
+</body>
+</html>
