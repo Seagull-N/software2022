@@ -22,15 +22,16 @@ public class VoteService {
     public Vote createVote(String cid, String uid, VoteForm form) {
         if (vRepo.findByUidAndCid(uid, cid) != null) {
             Vote v = vRepo.findByUidAndCid(uid, cid);
-            v.setEcaluation(form.getEvaluation());
+            v.setEvaluation(form.getEvaluation());
 
             return vRepo.save(v);
         }
-        
-
 
         Vote v = form.toEntity();
+        v.setCid(cid);
+        v.setUid(uid);
         return vRepo.save(v);
+
     }
 
     /**

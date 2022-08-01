@@ -32,7 +32,7 @@ public class VoteController {
 
    @PostMapping("/vote/{uid}/{cid}")
    String createVote(@PathVariable("uid") String uid, @PathVariable("cid") String cid, @ModelAttribute(name = "VoteForm") VoteForm form, Model model) {
-        vService.createVote(cid, uid, form);
+        //vService.createVote(cid, uid, form);
 
         return "redirect:/voted/" + uid + "/" + cid;
    }

@@ -18,7 +18,7 @@ public class Vote {
     @GeneratedValue
     Long seq;
     @NonNull
-    String ecaluation;
+    String evaluation;
     String cid;
     String uid;
 }

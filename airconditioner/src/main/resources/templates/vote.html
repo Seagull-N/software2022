@@ -9,7 +9,7 @@
 <body>
     <h1>投票</h1>
 
-    <form role="form" th:action="@{/create/__${uid}__/__${cid}__}" th:object="${VoteForm}" method="post">
+    <form role="form" th:action="@{/vote/__${uid}__/__${cid}__}" th:object="${VoteForm}" method="post">
         <table>
             <tr>
                 <td><label>評価: </label></td>
