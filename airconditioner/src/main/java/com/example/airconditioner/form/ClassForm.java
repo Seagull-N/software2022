@@ -21,10 +21,10 @@ public class ClassForm {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(startTime);
         calendar.add(Calendar.MINUTE, Integer.parseInt(endTime));
-        Date endTime = calendar.getTime();
+        Date d_endTime = calendar.getTime();
         
         // cidの自動生成が面倒なのでとりあえず適当な乱数で
-        Class c = new Class(cid, startTime, endTime, className);
+        Class c = new Class(cid, startTime, d_endTime, className);
         
         return c;
     }

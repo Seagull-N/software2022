@@ -1,7 +1,5 @@
 package com.example.airconditioner.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service; 
 
@@ -17,7 +15,7 @@ public class ClassService {
     /**
      * クラスをを作成する
      */
-    public Class createUser(ClassForm form) {
+    public Class createClass(ClassForm form) {
         Class c = form.toEntity();
 
         return cRepo.save(c);
@@ -28,6 +26,9 @@ public class ClassService {
      * @return
      */
     public Class getClass(String cid) {
+        if (!cRepo.existsById(cid)) {
+            return null;
+        }
         return cRepo.findById(cid).get();
     }
 }

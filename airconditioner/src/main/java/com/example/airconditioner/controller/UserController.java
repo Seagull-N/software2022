@@ -36,6 +36,6 @@ public class UserController {
             return "redirect:/create/" + u.getUid();
         }
 
-        return "redirect:/enter" + u.getUid();
+        return "redirect:/enter/" + u.getUid();
    }
 }
