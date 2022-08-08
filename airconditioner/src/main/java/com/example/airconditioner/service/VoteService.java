@@ -24,14 +24,12 @@ public class VoteService {
         if (vRepo.findByUidAndCid(uid, cid) != null) {
             Vote v = vRepo.findByUidAndCid(uid, cid);
             v.setEvaluation(form.getEvaluation());
-            System.out.println("hohheefwakfe");
             return vRepo.save(v);
         }
 
         Vote v = form.toEntity();
         v.setCid(cid);
         v.setUid(uid);
-        System.out.println("adfas");
         return vRepo.save(v);
 
     }
