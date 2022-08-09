@@ -7,24 +7,56 @@
     <title>空調管理要求システム</title>
 </head>
 <body>
-    <h1>ログイン画面</h1>
-    <h2>ログイン</h2>
-    <p> IDとRoleを選択してログインしてください</p>
+    <h1>
+        <div style="border: 3px solid; background-color: #abb8e6;">
+        空調管理要求システム用ログインページ
+        </div>
+    </h1>
+    <h2>
+        <div class="welcome">
+            空調管理要求システム用ログインページへようこそ.
+        </div>
+    </h2>
+
+    <div>
+        このページでは、IDとRoleを入力することで生徒側、教員側でログインすることが出来ます。
+    </div>
 
     <form role="form" th:action="@{/}" th:object="${UserForm}" method="post">
-        <table>
+        <table bgcolor="#eeeeff" height="120">
             <tr>
-                <td><label>ID: </label></td>
-                <td>メンバーIDには，アルファベット小文字，数字，ハイフン，アンダーバーのみ使用できます</td>
+                <td>
+                    <label>
+                        <b>ログインID: <b>
+                    </label>
+                </td>
                 <td><input type="text" required th:field="*{uid}" /></td>
             </tr>
             <tr>
-                <td><label>Role: </label></td>
-                <td>USERかTEACHERを入力してください。</td>
+                <td><label><b>Role: <b></label></td>
                 <td><input type="text" required th:field="*{role}" /></td>
             </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <label>
+                        上記 ID, Role を利用してシステムに
+                    </label>
+                    <input type="submit" value="ログイン" />
+                </td>
+            </tr>
         </table>
-        <p><input type="submit" value="ログイン" /></p>
     </form>
+    <ul>
+        <li>
+            <span class="notice"> 
+                <font color="red"><b>ログインIDに使用できるのは、アルファベット小文字、数字，ハイフン，アンダーバーのみです.<b></font>
+            </span>
+        </li>
+        <li>
+            <span class="notice"> 
+                <font color="red"><b>Roleには USER 又は TEACHER を入力してください.<b></font>
+            </span>
+        </li>
+    </ul>
 </body>
 </html>

@@ -7,22 +7,55 @@
     <title>空調管理要求システム</title>
 </head>
 <body>
-    <h1>教室作成</h1>
+    <h1>
+        <div style="border: 3px solid; background-color: #abb8e6;">
+            教室作成画面
+        </div>
+    </h1>
+    <h2>
+        <div class="welcome">
+            教員さん. 教室作成ページへようこそ.
+        </div>
+    </h2>
 
-    <form role="form" th:action="@{/create/} + ${uid}" th:object="${ClassForm}" method="post">
-        <table>
+    <div>
+        このページでは、授業名、授業時間を指定することが出来ます. 下記にそれぞれ入力してください.
+    </div>
+
+    <form role="form" th:action="@{/}" th:object="${UserForm}" method="post">
+        <table bgcolor="#eeeeff" height="120">
             <tr>
-                <td><label>ID: </label></td>
-                <td>授業名を入力してください</td>
-                <td><input type="text" required th:field="*{className}" /></td>
+                <td>
+                    <label>
+                        <b>class ID: <b>
+                    </label>
+                </td>
+                <td><input type="text" required th:field="*{uid}" /></td>
             </tr>
             <tr>
-                <td><label>Role: </label></td>
-                <td>授業が何分後に終了するか半角数字で入力してください</td>
-                <td><input type="text" required th:field="*{endTime}" /></td>
+                <td><label><b>school hours: <b></label></td>
+                <td><input type="text" required th:field="*{role}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <input type="submit" value="作成" />
+                </td>
             </tr>
         </table>
-        <p><input type="submit" value="作成" /></p>
     </form>
+    <ul>
+        <li>
+            <span class="notice"> 
+                <font color="red"><b>class IDには、授業名を入力してください.<b></font>
+            </span>
+        </li>
+        <li>
+            <span class="notice"> 
+                <font color="red"><b>school hoursには、授業時間を入力してください.<b></font>
+            </span>
+        </li>
+    </ul>
+
+
 </body>
 </html>

@@ -7,17 +7,36 @@
     <title>空調管理要求システム</title>
 </head>
 <body>
-    <h1>教室選択</h1>
+    <h1>
+        <div style="border: 3px solid; background-color: #abb8e6;">
+            教室選択画面
+        </div>
+    </h1>
+    <h2>
+        <div class="welcome">
+            生徒さん. 教室選択ページへようこそ.
+        </div>
+    </h2>
+    <div>
+        このページでは、あなたが受けたい授業を指定することが出来ます. 下記に授業名を入力してください.
+    </div>
 
-    <form th:action="@{/search/} + ${uid}" method="get">
-        <table>
+    <form role="form" th:action="@{/}" th:object="${UserForm}" method="post">
+        <table bgcolor="#eeeeff" height="100">
             <tr>
-                <td><label>ID: </label></td>
-                <td>授業IDを入力してください</td>
-                <td><input type="text" required name="cid" id="cid"/></td>
+                <td>
+                    <label>
+                        <b>class ID: <b>
+                    </label>
+                </td>
+                <td><input type="text" required th:field="*{uid}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <input type="submit" value="選択" />
+                </td>
             </tr>
         </table>
-        <p><input type="submit" value="選択" /></p>
     </form>
 </body>
 </html>
