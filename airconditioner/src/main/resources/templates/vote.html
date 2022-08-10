@@ -7,17 +7,23 @@
     <title>空調管理要求システム</title>
 </head>
 <body>
-    <h1>投票</h1>
+    <h1 style="border: 3px solid; background-color: #abb8e6;">投票</h1>
 
     <form role="form" th:action="@{/vote/__${uid}__/__${cid}__}" th:object="${VoteForm}" method="post">
         <table>
             <tr>
-                <td><label>評価: </label></td>
+                <td><label><b>評価: </b></label></td>
                 <td>体感温度をHOT, NORMAL, COOLで評価してください</td>
                 <td><input type="text" required th:field="*{evaluation}" /></td>
             </tr>
         </table>
-        <p><input type="submit" value="投票" /></p>
+        <style>
+            .button{
+                border: 1px solid #999;
+                background: #abb8e6;
+            }
+        </style>
+        <p><input type="submit" value="投票" class="button"/></p>
     </form>
 </body>
 </html>

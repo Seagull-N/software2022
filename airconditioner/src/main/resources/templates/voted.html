@@ -9,6 +9,12 @@
 <body>
     <h1>投票しました</h1>
 
-    <a th:href=@{/vote/__${uid}__/__${cid}__}>戻る</a>
+    <style>
+        .button{
+            border: 1px solid #999;
+            background: #abb8e6;
+        }
+    </style>
+    <a th:href=@{/vote/__${uid}__/__${cid}__} class="button">戻る</a>
 </body>
 </html>

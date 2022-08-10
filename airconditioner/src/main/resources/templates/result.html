@@ -6,16 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>空調管理要求システム</title>
 </head>
-<body>
-    <h1>投票確認: 授業ID [[${cid}]]</h1>
+<body margin: 20px; padding: 0; >
+    <h1 style="border: 3px solid; background-color: #abb8e6;">投票確認: 授業ID [[${cid}]]</h1>
 
-    <h2>投票人数</h2>
+    <h2 >投票人数</h2>
 
+    <table bgcolor="#eeeeff" height="120">
     <tr>
-        <td>暑い: [[${hot}]]人</td>
-        <td>普通: [[${normal}]]人</td>
-        <td>寒い: [[${cold}]]人</td>
+        <td><font color="red">暑い</font>: [[${hot}]]人</td>
     </tr>
+    <tr>
+        <td>普通: [[${normal}]]人</td>
+    </tr>
+    <tr>    
+        <td><font color="blue">寒い</font>: [[${cold}]]人</td>
+    </tr>
+    </table>
 
 </body>
 </html>
