@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空調管理要求システム</title>
+</head>
+<body>
+    <h1 style="border: 3px solid; background-color: #abb8e6;">投票</h1>
+
+    <form role="form" th:action="@{/vote/__${uid}__/__${cid}__}" th:object="${VoteForm}" method="post">
+        <table>
+            <tr>
+                <td><label><b>評価: </b></label></td>
+                <td>体感温度をHOT, NORMAL, COOLで評価してください</td>
+                <td><input type="text" required th:field="*{evaluation}" /></td>
+            </tr>
+        </table>
+        <style>
+            .button{
+                border: 1px solid #999;
+                background: #abb8e6;
+            }
+        </style>
+        <p><input type="submit" value="投票" class="button"/></p>
+    </form>
+</body>
+</html>

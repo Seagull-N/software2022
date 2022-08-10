@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空調管理要求システム</title>
+</head>
+<body margin: 20px; padding: 0; >
+    <h1 style="border: 3px solid; background-color: #abb8e6;">投票確認: 授業ID [[${cid}]]</h1>
+
+    <h2 >投票人数</h2>
+
+    <table bgcolor="#eeeeff" height="120">
+    <tr>
+        <td><font color="red">暑い</font>: [[${hot}]]人</td>
+    </tr>
+    <tr>
+        <td>普通: [[${normal}]]人</td>
+    </tr>
+    <tr>    
+        <td><font color="blue">寒い</font>: [[${cold}]]人</td>
+    </tr>
+    </table>
+
+</body>
+</html>

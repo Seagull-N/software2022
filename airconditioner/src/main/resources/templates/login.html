@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空調管理要求システム</title>
+</head>
+<body>
+    <h1>
+        <div style="border: 3px solid; background-color: #abb8e6;">
+        空調管理要求システム用ログインページ
+        </div>
+    </h1>
+    <h2>
+        <div class="welcome">
+            空調管理要求システム用ログインページへようこそ.
+        </div>
+    </h2>
+
+    <div>
+        このページでは、IDとRoleを入力することで生徒側、教員側でログインすることが出来ます。
+    </div>
+
+    <form role="form" th:action="@{/}" th:object="${UserForm}" method="post">
+        <table bgcolor="#eeeeff" height="120">
+            <tr>
+                <td>
+                    <label>
+                        <b>ログインID: <b>
+                    </label>
+                </td>
+                <td><input type="text" required th:field="*{uid}" /></td>
+            </tr>
+            <tr>
+                <td><label><b>Role: <b></label></td>
+                <td><input type="text" required th:field="*{role}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <label>
+                        上記 ID, Role を利用してシステムに
+                    </label>
+                    <input type="submit" value="ログイン" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <ul>
+        <li>
+            <span class="notice"> 
+                <font color="red"><b>ログインIDに使用できるのは、アルファベット小文字、数字，ハイフン，アンダーバーのみです.<b></font>
+            </span>
+        </li>
+        <li>
+            <span class="notice"> 
+                <font color="red"><b>Roleには USER 又は TEACHER を入力してください.<b></font>
+            </span>
+        </li>
+    </ul>
+</body>
+</html>

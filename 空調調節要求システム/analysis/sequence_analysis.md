@@ -26,6 +26,6 @@
 ![]()
 ## 5. 投票結果を確認する
 ---
-- [ユースケース記述]()
-![]()
-![]()
+- [ユースケース記述](../usecase/Usecase05.md)
+![](img/robustness05.jpg)
+![](img/sequence05.png)
